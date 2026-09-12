@@ -1,0 +1,17 @@
+Function countAtRisk
+
+
+
+Purpose
+Counts how many students in the class are academically at risk
+
+
+
+precondition
+Scores contains the grade data for all the students
+
+
+
+Postconsition
+scores is not changed
+The number of students who are at risk is returned 

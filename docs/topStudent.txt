@@ -1,0 +1,16 @@
+Function topStudent 
+
+
+Purpose 
+Finds the student with the highest average in the class 
+
+
+
+Precondition 
+Contains the grade data for all students. 
+
+
+
+PostCondition 
+Scores is not changed 
+The index of the student with the highest average is returned 

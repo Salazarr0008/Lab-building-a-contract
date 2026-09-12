@@ -1,0 +1,14 @@
+Function findClassExtremes
+
+Purpose 
+Finds the lowest and highest scores in the entire class.
+
+
+Precondition
+Scores contains the grade data for all the students
+
+
+Postconditon 
+scores is not chaged 
+lowest containns the lowesr score in the class
+highest contains the highest score in the class

@@ -87,3 +87,49 @@ bool isAtRisk(const ScoreGrid& scores, int studentIndex) {
 
     return false;
 }
+int countAtRisk(const ScoreGrid& scores) {
+
+int count{};
+
+for (auto i{0}; i < STUDENT_COUNT; i++) {
+if (isAtRisk(scores, i)) {
+count++;
+}
+}
+return count;
+}
+void findClassExtremes(const ScoreGrid& scores, double& lowest, double& highest)
+{
+        lowest = scores [0][0];
+        highest = scores[0][0];
+
+        for (auto i{0}; i < STUDENT_COUNT; i++) {
+            for (auto j{0}; j < ASSIGNMENT_COUNT; j++) {
+                lowest = std::min(lowest, scores[i][j]);
+                highest = std::max(highest, scores[i][j]);
+                }}}
+
+void applyCurve(ScoreGrid& scores, double amount) 
+{
+    for (auto i{0}; i < STUDENT_COUNT; i++) {
+        for (auto j{0}; j < ASSIGNMENT_COUNT; j++) {
+            scores[i][j] += amount;
+
+            if (scores[i][j] > 100.0) {
+                scores[i][j] = 100.0;
+            }}}}
+
+int topStudent(const ScoreGrid& scores) 
+{
+    int topIndex{0};
+
+    for (auto i{1}; i < STUDENT_COUNT; i++)
+    {
+        if (studentAverage(scores, i) > studentAverage(scores, topIndex))
+        {
+            topIndex=i;
+            }}
+            return topIndex;
+            }
+
+

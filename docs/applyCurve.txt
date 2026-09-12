@@ -1,0 +1,19 @@
+function applyCurve
+
+
+
+Purpose 
+Add a curve amount to every score in the class 
+
+
+
+
+Precondition 
+Scores containts the grade data for all students 
+amount is the number of points to add to each score 
+
+
+
+Postcondition 
+Every score is the incresed by amount 
+No score is allowed to be greater than 100 
